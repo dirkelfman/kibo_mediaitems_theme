@@ -1,0 +1,3 @@
+{% set_var queryDoc "properties.targetName eq {0}"|string_format(model.config.targetName) %} 
+{% set_var pageSize model.config.count|default(1) %} 
+{% include_documents "modules/cms/media_items" with listFQN="media_items@mozu" pageSize=pageSize view="default" query=queryDoc effectivityDated=true as_parameter %}

@@ -107,7 +107,7 @@
             {% endblock site-nav %}
     
             <div role="main" id="page-content" class="mz-l-pagecontent">
-                
+                {% dropzone "header" scope="site" %}
                 {% block breadcrumbs %}
                 {% if themeSettings.showBreadcrumbs %}
                 {% include "modules/breadcrumbs" %}

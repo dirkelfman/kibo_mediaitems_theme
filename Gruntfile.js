@@ -186,11 +186,15 @@ module.exports = function (grunt) {
     ]);
     grunt.registerTask('build-production', [
         'jshint:production',
-        'mozutheme:fullcompile',
-        'compress'
+        'mozutheme:compile',
+        'compress',
+        'mozusync:upload'
     ]);
     grunt.registerTask('reset', [
         'mozusync:wipe',
+        'mozusync:upload'
+    ]);
+    grunt.registerTask('upload', [
         'mozusync:upload'
     ]);
     grunt.registerTask('default', [

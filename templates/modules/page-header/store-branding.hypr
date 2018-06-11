@@ -1,3 +1,5 @@
 ﻿    <h1 class="mz-storebranding" id="store-branding">
         <a href="{{siteContext.siteSubdirectory}}/" title="{{ siteContext.generalSettings.websiteName }}">{{ siteContext.generalSettings.websiteName }}</a>
+        <br/>
+         {% dropzone "header2" scope="site" %}
     </h1>

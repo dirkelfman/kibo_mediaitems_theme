@@ -1,0 +1,7 @@
+{% if model.items %}
+    {% for document in model.items %}
+        {{ document.properties.htmlContent|safe }}
+    {% endfor %}
+{% else %}
+    <!--<div>Please enter a valid Document Name.</div>-->
+{% endif %}
